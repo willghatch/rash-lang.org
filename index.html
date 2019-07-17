@@ -70,11 +70,14 @@
       <div width="100%">
       <asciinema-player src="assets/demo.cast" async cols="40" start-at="1" id="player" font-size="small">
       </asciinema-player>
+      
       <script>
-        cols = Math.min(screen.width, window.innerWidth, 93*8.1)/8.1
-        document.getElementById("player").setAttribute("cols", String(cols))
+        let cols = Math.min(screen.width, window.innerWidth, 93*8.1)/8.1;
+        document.getElementById("player").setAttribute("cols", String(cols));
       </script>
+
       <script defer src="assets/asciinema-player.js"></script>
+
       </div>
       <br />
       <p class="h3">For installation instructions, see the <a
