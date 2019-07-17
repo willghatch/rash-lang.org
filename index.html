@@ -49,31 +49,6 @@
   </nav>
 
 
-  <!--
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    -->
-
   <div class="container">
     <div align="center">
       <br />
@@ -92,9 +67,15 @@
           href="https://www.racket-lang.org">Racket</a>, a full-fledged programming language.</p>
       <br />
 
-      <asciinema-player src="assets/demo.cast" async cols="40" start-at="1">
+      <div width="100%">
+      <asciinema-player src="assets/demo.cast" async cols="40" start-at="1" id="player" font-size="small">
       </asciinema-player>
-      <script src="assets/asciinema-player.js"></script>
+      <script>
+        cols = Math.min(screen.width, window.innerWidth, 93*8.1)/8.1
+        document.getElementById("player").setAttribute("cols", String(cols))
+      </script>
+      <script defer src="assets/asciinema-player.js"></script>
+      </div>
       <br />
       <p class="h3">For installation instructions, see the <a
           href="https://github.com/willghatch/racket-rash#getting-started">GitHub Page</a>.</p>
